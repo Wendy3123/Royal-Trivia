@@ -1,0 +1,67 @@
+body{
+    background-color: pink;
+}
+
+h1{
+    text-align: center;
+    font-size: 47px;
+    color: rgb(8, 135, 135);
+    text-shadow: 2px 1.5px rgb(220, 59, 139);
+    margin-top: 0;
+}
+
+#PlayerName{
+    font-size:25px;
+    text-align: center;
+}
+
+#roundTextborder{
+    border-radius: 20px;
+    border-color: hotpink;
+    width:170px;
+    height:19px;
+    color:hotpink;
+    font-size: 16px;
+}
+
+#rules{
+    font-size:18px;
+    text-align: center;
+    background-color: rgb(8, 135, 135); 
+    list-style: none;
+    border : 4px black solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#rulesOutterDiv{
+    margin: auto;
+    width: 55%;
+    padding: 10px;
+}
+
+#LetsBeginButton{
+    text-align: center;
+}
+
+#LetsBeginButton2{
+    width:105px;
+    height:25px;
+    font-size: 16px;
+    border-radius: 0 0 15px 15px; 
+    border-color: hotpink;
+}
+
+#chanelbagimg{
+    width:360px;
+    height:300px;
+    margin-top:17px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:5px solid  rgb(8, 135, 135); 
+}
+
+#prizetext{
+    text-align: center;
+}
