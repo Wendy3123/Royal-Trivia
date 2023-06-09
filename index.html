@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Ranking Trivia Game</title>
-    <link rel = "stylesheet" href = "./style.css">
+    <link rel="stylesheet" href="./mainstyle.css">
+    <link rel="stylesheet" href="./topicChoices.css">
+    <link rel="stylesheet" href="./section3.css">
 </head>
+
 <body>
-    <h1>💗 ROYAL RANKING TRIVIA GAME 💗</h1>
-    <form method = "GET">
-        <div id = 'PlayerName'>
-            Enter Your Name: 
-            <input id = 'roundTextborder' type = 'text'>
+    <section id="firstPage">
+        <h1>💗 ROYAL RANKING TRIVIA GAME 💗</h1>
+        <form>
+            <div id='PlayerName'>
+                Enter Your Name:
+                <input class='roundTextborder' id='PlayerNameInput' type='text'>
+            </div>
+            <div id='rulesOutterDiv'>
+                <ul id='rules'>
+                    <li><u>Rules</u></li>
+                    <li>1. No Cheating!</li>
+                    <li>2. Once you submit an answer, the answer is final</li>
+                    <li>3. No skipping, ALL questions must be answered</li>
+                    <li>4. Try as many times as you would like</li>
+                </ul>
+            </div>
+            <div id='LetsBeginButton'>
+                <input id='LetsBeginButton2' type='submit' value='Lets Begin!'>
+            </div>
+        </form>
+        <div>
+            <h2 id='prizetext'>Score 100% and win the ultimate prize! </h2>
+            <img id='chanelbagimg' src='./ChanelGift.png' alt='chanel bag pic'>
         </div>
-        <div id = 'rulesOutterDiv'>
-            <ul id = 'rules'>
-                <li><u>Rules</u></li>
-                <li>1. No Cheating!</li>
-                <li>2. Once you submit an answer, the answer is final</li>
-                <li>3. No skipping, ALL questions must be answered</li>
-                <li>4. Try as many times as you would like</li>
-                <li>5. Good luck & have fun </li>
-            </ul>
+    </section>
+    <section id="topicChoicePage" class="hidden">
+        <h1 id='header1'>CHOOSE THE TOPIC OF YOUR CHOICE!</h1>
+        <div>
+            <h2 id='line1'>
+                <p id='movieTrivia'><em>Movie Trivia</em> </p>
+                <p id='mathTrivia'><em>Math Trivia</em></p>
+                <p id='musicTrivia'><em>Music Trivia</em></p>
+                <p id='geographyTrivia'><em>Geography Trivia</em></p>
+            </h2>
         </div>
-        <div id = 'LetsBeginButton'>
-            <input id ='LetsBeginButton2' type='submit' value = 'Lets Begin!'>
+        <img id='movieTriviaimg' src="./movieTrivia.png" alt='pic of cartoon camera'>
+        <img id='mathTriviaimg' src="./mathTrivia.png" alt='pic of cartoon numbers'>
+        <img id='musicTriviaimg' src="./musicTrivia.png" alt='pic of cartoon instruments'>
+        <img id='geographyTriviaimg' src="./geographyTrivia.png" alt='pic of cartoon map'>
+
+        <div>
+            <h2 id='line2'>
+                <p class ='choicelink' id='movieTrivialink'>Click here to start movie trivia quiz</p>
+                <p class ='choicelink' id='mathTrivialink'>Click here to start math trivia quiz</p>
+                <p class ='choicelink' id='musicTrivialink'>Click here to start music trivia quiz</p>
+                <p class ='choicelink' id='geographyTrivialink'>Click here to start geography trivia quiz</p>
+            </h2>
         </div>
-    </form>
-    <div>
-        <h2 id = 'prizetext'>Score 100% and win the ultimate prize! </h2>
-        <img id = 'chanelbagimg' src = './ChanelGift.png' alt = 'chanel bag pic'>
-    </div>
+
+        <h2 id="goodluckText">GOOD LUCK AND HAVE FUN</h2>
+    </section>
+    <section id="quizPage" class="">
+        <h1>Quiz</h1>
+        <div id = 'Question'>
+            <h2>what color is the sky?</h2>
+            <div id = 'choices'>
+                <div id = 'row1'>
+                    <p class="choice">white</p>
+                    <p class="choice">red</p>
+                </div>
+                <div id ='row2'>
+                    <p class="choice">blue</p>
+                    <p class="choice">pink</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="./index.js"></script>
 </body>
+
 </html>

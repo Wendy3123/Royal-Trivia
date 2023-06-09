@@ -15,7 +15,7 @@ h1{
     text-align: center;
 }
 
-#roundTextborder{
+.roundTextborder{
     border-radius: 20px;
     border-color: hotpink;
     width:170px;
@@ -64,4 +64,8 @@ h1{
 
 #prizetext{
     text-align: center;
+}
+
+.hidden{
+    display:none
 }

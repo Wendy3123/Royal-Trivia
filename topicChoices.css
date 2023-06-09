@@ -1,3 +1,72 @@
-body{
-    background-color: pink;
+#header1{
+    text-align: center;
+    color : rgb(8, 135, 135);
+    font-size: 38px;
+}
+
+#movieTriviaimg{
+    width:300px;
+    height:260px;
+    border-radius: 20px;
+}
+
+#geographyTriviaimg{
+    width:300px;
+    height:260px;
+    border-radius: 20px;
+}
+
+#mathTriviaimg{
+    width:300px;
+    height:260px;
+    border-radius: 20px;
+}
+
+#musicTriviaimg{
+    width:300px;
+    height:260px;
+    border-radius: 20px;
+}
+
+#line1,#line2{
+    display:flex;
+}
+
+#movieTrivia,#movieTriviaimg,#movieTrivialink{
+    margin-left: 3%;
+}
+
+#movieTrivia,#musicTrivia,#mathTrivia{
+    padding-right: 15.5%;
+}
+
+#movieTriviaimg,#musicTriviaimg,#mathTriviaimg{
+    margin-right: 1.5%;
+}
+
+#movieTriviaimg,#musicTriviaimg,#mathTriviaimg,#geographyTriviaimg{
+    border: 2px solid rgb(8, 135, 135);
+}
+
+#movieTrivialink,#musicTrivialink,#mathTrivialink{
+    padding-right: 6.5%;
+    font-size:medium
+}
+
+#geographyTrivialink{
+    font-size:medium
+}
+
+#goodluckText{
+    text-align: center;
+    color:rgb(8, 135, 135);
+    padding-top: 25px;
+}
+
+.choicelink{
+    cursor: pointer;
+}
+
+.choicelink:hover{
+    color:rgb(8, 135, 135)
 }
