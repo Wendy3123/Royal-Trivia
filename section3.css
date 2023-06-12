@@ -24,3 +24,11 @@
     background-color:rgb(8, 135, 135);
     color:pink
 }
+
+#nextButton{
+    background-color: rgb(8, 135, 135);
+    color: pink;
+    padding: 12px 30px;
+    font-size: 16px;
+    margin-top: 20px;
+}

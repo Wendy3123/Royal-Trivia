@@ -34,50 +34,55 @@
         </form>
         <div>
             <h2 id='prizetext'>Score 100% and win the ultimate prize! </h2>
-            <img id='chanelbagimg' src='./ChanelGift.png' alt='chanel bag pic'>
+            <img id='chanelbagimg' src='./images/ChanelGift.png' alt='chanel bag pic'>
         </div>
     </section>
     <section id="topicChoicePage" class="hidden">
         <h1 id='header1'>CHOOSE THE TOPIC OF YOUR CHOICE!</h1>
         <div>
             <h2 id='line1'>
-                <p id='movieTrivia'><em>Movie Trivia</em> </p>
-                <p id='mathTrivia'><em>Math Trivia</em></p>
+                <p id='film_and_tv_Trivia'><em>Film and TV Trivia</em> </p>
+                <p id='scienceTrivia'><em>Science Trivia</em></p>
                 <p id='musicTrivia'><em>Music Trivia</em></p>
                 <p id='geographyTrivia'><em>Geography Trivia</em></p>
             </h2>
         </div>
-        <img id='movieTriviaimg' src="./movieTrivia.png" alt='pic of cartoon camera'>
-        <img id='mathTriviaimg' src="./mathTrivia.png" alt='pic of cartoon numbers'>
-        <img id='musicTriviaimg' src="./musicTrivia.png" alt='pic of cartoon instruments'>
-        <img id='geographyTriviaimg' src="./geographyTrivia.png" alt='pic of cartoon map'>
+        <img id='film_and_tv_Triviaimg' src="./images/film_and_tv_Trivia.png" alt='pic of cartoon camera'>
+        <img id='scienceTriviaimg' src="./images/scienceTrivia.png" alt='pic of cartoon science'>
+        <img id='musicTriviaimg' src="./images/musicTrivia.png" alt='pic of cartoon instruments'>
+        <img id='geographyTriviaimg' src="./images/geographyTrivia.png" alt='pic of cartoon map'>
 
         <div>
             <h2 id='line2'>
-                <p class ='choicelink' id='movieTrivialink'>Click here to start movie trivia quiz</p>
-                <p class ='choicelink' id='mathTrivialink'>Click here to start math trivia quiz</p>
-                <p class ='choicelink' id='musicTrivialink'>Click here to start music trivia quiz</p>
-                <p class ='choicelink' id='geographyTrivialink'>Click here to start geography trivia quiz</p>
+                <p class ='choicelink' id='film_and_tv'>Click here to start movie trivia quiz</p>
+                <p class ='choicelink' id='science'>Click here to start science trivia quiz</p>
+                <p class ='choicelink' id='music'>Click here to start music trivia quiz</p>
+                <p class ='choicelink' id='geography'>Click here to start geography trivia quiz</p>
             </h2>
         </div>
 
         <h2 id="goodluckText">GOOD LUCK AND HAVE FUN</h2>
     </section>
-    <section id="quizPage" class="">
+    <section id="quizPage" class="hidden">
         <h1>Quiz</h1>
         <div id = 'Question'>
-            <h2>what color is the sky?</h2>
+            <h2 id = 'displayQuestion'></h2>
             <div id = 'choices'>
                 <div id = 'row1'>
-                    <p class="choice">white</p>
-                    <p class="choice">red</p>
+                    <p class="choice"></p>
+                    <p class="choice"></p>
                 </div>
                 <div id ='row2'>
-                    <p class="choice">blue</p>
-                    <p class="choice">pink</p>
+                    <p class="choice"></p>
+                    <p class="choice"></p>
                 </div>
             </div>
+            <button id="nextButton">Next Question</button>
         </div>
+    </section>
+    <section id = 'resultPage' class='hidden'>
+        <h1>RESULTS</h1>
+        <p>You scored <span id ='displayScore'></span> out of 100</p>
     </section>
     <script src="./index.js"></script>
 </body>

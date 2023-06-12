@@ -4,7 +4,7 @@
     font-size: 38px;
 }
 
-#movieTriviaimg{
+#film_and_tv_Triviaimg{
     width:300px;
     height:260px;
     border-radius: 20px;
@@ -16,7 +16,7 @@
     border-radius: 20px;
 }
 
-#mathTriviaimg{
+#scienceTriviaimg{
     width:300px;
     height:260px;
     border-radius: 20px;
@@ -32,30 +32,23 @@
     display:flex;
 }
 
-#movieTrivia,#movieTriviaimg,#movieTrivialink{
+#film_and_tv_Trivia,#movieTriviaimg{
     margin-left: 3%;
 }
 
-#movieTrivia,#musicTrivia,#mathTrivia{
+#film_and_tv_Trivia,#musicTrivia,#scienceTrivia{
     padding-right: 15.5%;
 }
 
-#movieTriviaimg,#musicTriviaimg,#mathTriviaimg{
-    margin-right: 1.5%;
+#film_and_tv_Triviaimg,#musicTriviaimg,#scienceTriviaimg{
+    margin-right: 2.1%;
 }
 
-#movieTriviaimg,#musicTriviaimg,#mathTriviaimg,#geographyTriviaimg{
+#film_and_tv_Triviaimg,#musicTriviaimg,#scienceTriviaimg,#geographyTriviaimg{
     border: 2px solid rgb(8, 135, 135);
+    margin-left: 1%;
 }
 
-#movieTrivialink,#musicTrivialink,#mathTrivialink{
-    padding-right: 6.5%;
-    font-size:medium
-}
-
-#geographyTrivialink{
-    font-size:medium
-}
 
 #goodluckText{
     text-align: center;
@@ -65,8 +58,19 @@
 
 .choicelink{
     cursor: pointer;
+    padding-right: 6.5%;
+    font-size:medium;
+    margin-left: 3%;
 }
 
 .choicelink:hover{
     color:rgb(8, 135, 135)
+}
+
+.correct{
+    background-color: green;
+}
+
+.incorrect{
+    background-color: red;
 }
