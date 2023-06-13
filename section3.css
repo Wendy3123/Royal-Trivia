@@ -32,3 +32,10 @@
     font-size: 16px;
     margin-top: 20px;
 }
+
+#scoreSentence{
+    border: solid 5px rgb(8, 135, 135);
+    font-size: 25px;
+    text-align: center;
+}
+

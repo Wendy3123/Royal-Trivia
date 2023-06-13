@@ -1,4 +1,4 @@
-const form = document.querySelector('form')
+const form = document.querySelector('form')     //form loop for playername entering and submitting
 const firstPage = document.getElementById('firstPage')
 const topicChoicesPage = document.getElementById('topicChoicePage')
 const quizPage = document.getElementById('quizPage')
@@ -9,6 +9,7 @@ let score = 0;
 let nextButton = document.getElementById('nextButton')
 let answerchoice = document.querySelectorAll('.choice')
 let resultPage = document.getElementById('resultPage')
+
 
 function handleSubmit(e){
     e.preventDefault()
@@ -85,6 +86,9 @@ function nextQuestion(){
         quizPage.classList.add('hidden')
         let displayScore = document.getElementById('displayScore')
         displayScore.textContent = score
+        // let UserName = document.getElementById('PlayerNameInput')
+        // let name = UserName.textContent
+        // UserName.textContent = name
     }
 }
 
