@@ -10,6 +10,8 @@ let nextButton = document.getElementById('nextButton')
 let answerchoice = document.querySelectorAll('.choice')
 let resultPage = document.getElementById('resultPage')
 let username = document.getElementById('PlayerNameInput');
+let loserText = document.getElementById('loserText');
+let winnerText = document.getElementById('winnerText')
 
 
 function handleSubmit(e) {
@@ -21,6 +23,7 @@ function handleSubmit(e) {
 }
 
 function chooseTopic(e) {
+    console.log(score)
     console.log(e.target.id)                        //jsut checking what the target id is
     quizPage.classList.remove('hidden')                //remove the hidden class and shows the quiz page
     topicChoicesPage.classList.add('hidden')           //hides the topic choice page once the topic is selected then goes to the quiz page
@@ -87,12 +90,22 @@ function nextQuestion() {
     else {                                           //if we are finished with last question  
         resultPage.classList.remove('hidden')        //then show and remove the hidden class for the results page
         quizPage.classList.add('hidden')            //we want to hide the quiz page now that we finished
+        resultPageFeedback()                    //call the display result feedback after the result page is displayed so it can print the winner/loser text through the resultPageFeedback() function
         let displayScore = document.getElementById('displayScore')     //set a new variable to display score
         displayScore.textContent = score                //set this new variable equal to our score variable we have above that keeps track of our points throughout the quiz and make sure its .textContent to show the score
         let UserNamesentence = document.getElementById('UserNamesentence')      //create variable to equal the span id we created in html
         UserNamesentence.textContent = username;                //set that variable now equal to the username varirable which is what the player enters in
     }                                                           //before they press lets begin! button
     
+}
+
+function resultPageFeedback(){                              //function to show loser text or winner text
+    if (score < 100){                                       //if score is less than 100 then we remove the hidden class and display the loser text
+        loserText.classList.remove('hidden')
+    }
+    else{
+        winnerText.classList.remove('hidden')               //else if score === 100 then we remove hidden class and display winner text
+    }
 }
 
 
