@@ -56,9 +56,23 @@
     display: block;
     margin:40px auto 40px auto;
     border:5px solid  rgb(8, 135, 135); 
+    z-index:1;
 }
 
 #clickGiftText{
     text-align: center;
     color: rgb(8, 135, 135);
 }
+
+
+#loserGift1,#ultimateGift{
+    width:370px;
+    height:330px;
+    display: block;
+    margin:40px auto 40px auto;
+    border:5px solid  rgb(8, 135, 135); 
+    position:relative;
+    top: -385px;
+    z-index: -1; 
+}
+

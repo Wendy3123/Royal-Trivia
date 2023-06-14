@@ -12,6 +12,9 @@ let resultPage = document.getElementById('resultPage')
 let username = document.getElementById('PlayerNameInput');
 let loserText = document.getElementById('loserText');
 let winnerText = document.getElementById('winnerText')
+let closedGiftbox = document.getElementById('closedGiftbox')
+let loserGift1 = document.getElementById('loserGift1')
+let ultimateGift = document.getElementById('ultimateGift')
 
 
 function handleSubmit(e) {
@@ -96,7 +99,6 @@ function nextQuestion() {
         let UserNamesentence = document.getElementById('UserNamesentence')      //create variable to equal the span id we created in html
         UserNamesentence.textContent = username;                //set that variable now equal to the username varirable which is what the player enters in
     }                                                           //before they press lets begin! button
-    
 }
 
 function resultPageFeedback(){                              //function to show loser text or winner text
@@ -108,6 +110,16 @@ function resultPageFeedback(){                              //function to show l
     }
 }
 
+function showGifts(){                               //show whats inside gift box function()
+    closedGiftbox.classList.add('hidden')
+    if(score < 100){                                    //if score is not 100 display loser gift
+        loserGift1.classList.remove('hidden')
+    }
+    else{
+        ultimateGift.classList.remove('hidden')            //if score is 100 display winner gift 
+    }
+}
+
 
 for (let i = 0; i < choicelinks.length; i++) {              //array going through the four possible quiz topics
     choicelinks[i].addEventListener('click', chooseTopic)      //when you click the topic of choice the function chooseTopic() runs
@@ -116,5 +128,5 @@ for (let i = 0; i < choicelinks.length; i++) {              //array going throug
 
 form.addEventListener('submit', handleSubmit)               //once we click the lets begin button (form) then it runs the function handleSubmit()
 nextButton.addEventListener('click', nextQuestion)          //everytime we click the next button the nextQuestion() function runs
-
+closedGiftbox.addEventListener('click',showGifts)           //when u click on the gift box it will hide the img then show the img behind it
 
