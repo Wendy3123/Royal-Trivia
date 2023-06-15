@@ -4,7 +4,7 @@ body{
 
 h1{
     text-align: center;
-    font-size: 47px;
+    font-size: 45px;
     color: rgb(8, 135, 135);
     text-shadow: 2px 1.5px rgb(220, 59, 139);
     margin-top: 0;
@@ -54,7 +54,7 @@ h1{
 
 #chanelbagimg{
     width:360px;
-    height:300px;
+    height:310px;
     margin-top:17px;
     display: block;
     margin-left: auto;
@@ -68,4 +68,21 @@ h1{
 
 .hidden{
     display:none;
+}
+
+#instructions{
+    text-align: center;
+    font-size: 20px;
+    padding-top:15px;
+}
+
+#instruction_name{
+    color:rgb(8, 135, 135); 
+}
+
+#instructionp{
+    font-size: 18px;
+    text-align: left;
+    margin-left: 100px;
+    margin-right:100px;
 }
