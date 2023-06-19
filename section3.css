@@ -18,6 +18,7 @@
     padding:10px;
     text-align: center;
     font-size: 20px;
+    margin-bottom:20px;
 }
 
 .choice:hover{
@@ -53,10 +54,7 @@
 #closedGiftbox{
     width:380px;
     height:340px;
-    display: block;
-    margin:40px auto 40px auto;
-    border:5px solid  rgb(8, 135, 135); 
-    z-index:1;
+    border:5px solid  rgb(8, 135, 135);
 }
 
 #clickGiftText{
@@ -68,11 +66,13 @@
 #loserGift1,#ultimateGift{
     width:370px;
     height:330px;
-    display: block;
-    margin:40px auto 40px auto;
-    border:5px solid  rgb(8, 135, 135); 
-    position:relative;
-    top: -385px;
-    z-index: -1; 
+    border:5px solid  rgb(8, 135, 135);
 }
+
+#allGiftImages{
+    display:flex;
+    justify-content: center;
+}
+
+
 

@@ -23,6 +23,8 @@ function handleSubmit(e) {
     localStorage.setItem('playerName', username)                //stores the username in a local storage
     firstPage.classList.add('hidden')                       //hides the first page after lets begin button is clicked
     topicChoicesPage.classList.remove('hidden')             //removes the hidden for the topic choice page so it displays after the first page hides
+    let music = document.getElementById('mainMusic')
+    music.play()
 }
 
 function chooseTopic(e) {
@@ -55,7 +57,8 @@ function DisplayQuestion() {
      // we can see it under those names it was alrdy given) Ex: "question":{
     //                                                              "text": "blah blah random question?"  }   ==>we can we we have to select their questions then text after so that the question in thier text shows up in our h2Question.textcontent
     let answerArray = question.incorrectAnswers                 //now to get all the answer choices (4 choices total) ; so same as above we do our var question then .incorrectAnswers is their given array with 3 incorrect answer
-    answerArray.push(question.correctAnswer)                   //now we want to push(aka add to the last index) the correct answer so now we have 3 incorretcs and 1 correct at the end
+    let randomIndex = Math.floor(Math.random()*4)
+    answerArray.splice(randomIndex,0,question.correctAnswer)                   //now we want to push(aka add to the last index) the correct answer so now we have 3 incorretcs and 1 correct at the end
     for (let i = 0; i < answerchoice.length; i++) {             //set the array length to index=3 because there are 4 choices total
         answerchoice[i].textContent = answerArray[i]            //add the correct answer text content into the 4 choices. so now it will print the actual text from the api such as "example1" "answer2" "answer3" "answer4"
         answerchoice[i].addEventListener('click', handleUserChoice)         //now for each choice in array that we click on there will be a function handleUserChoice() that runs after the click
@@ -66,12 +69,19 @@ function handleUserChoice(e) {
     console.log(e.target.textContent)               //checking the target.textContent 
     let userChoice = e.target.textContent.trim()       //trim() makes sure the answer doesnt count any blank spaces
     //set the userChoice to which ever answer the user clicks on excluding the white space that may interfere with answer
-    if (userChoice === questionArray[currentIndex].correctAnswer) {
+    if (userChoice === questionArray[currentIndex].correctAnswer.trim()) {
         score += 10                                 //if the user answer choice is correct add 10 points to score and add class list of 'correct' which you can see in css means change the background color to green
-        e.target.classList.add('correct')   
+        e.target.classList.add('correct')  
+        let winmusic = document.getElementById('winMusic')
+        winmusic.play() 
     }
     else {
         e.target.classList.add('incorrect')     //if user is incorrect no points are added and the class list incorrect is added and in css we can see that the .incorrect class changes background color to red
+        let losemusic = document.getElementById('loseMusic')
+        losemusic.play()
+    }
+    for(let i = 0;i<answerchoice.length;i++){
+        answerchoice[i].disabled = true
     }
     //if correct score +10 
     //change all incorrect answers to red
@@ -81,7 +91,9 @@ function handleUserChoice(e) {
 function resetChoices() {
     for (let i = 0; i < answerchoice.length; i++) {     
         answerchoice[i].classList.remove('correct', 'incorrect')
+        answerchoice[i].disabled=false
     }                     //this function resets the answer choices back to how it was by removing either the red/green background color from the incorrect and correct css class
+
 }
 
 function nextQuestion() {
@@ -111,6 +123,7 @@ function resultPageFeedback(){                              //function to show l
 }
 
 function showGifts(){                               //show whats inside gift box function()
+    console.log("show gifts")
     closedGiftbox.classList.add('hidden')
     if(score < 100){                                    //if score is not 100 display loser gift
         loserGift1.classList.remove('hidden')

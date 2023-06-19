@@ -24,10 +24,13 @@
                     <summary id="instruction_name">
                         Instructions to Game
                     </summary>
-                    <p id="instructionp"><strong>WELCOME</strong>, players will choose the topic of their choice and try their best to answer all ten questions 
-                        correctly. Read through each question carefully, and select your answer. Once the answer is selected, the page will reveal  
-                        red if the answer is incorrect; green if the answer is correct. After reviewing your answer, click the next button to continue on.
-                        When you get to the end of the quiz, click 'Finish' to see your results. 
+                    <p id="instructionp"><strong>WELCOME</strong>, players will choose the topic of their choice and try
+                        their best to answer all ten questions
+                        correctly. Read through each question carefully, and select your answer. Once the answer is
+                        selected, the page will reveal
+                        red if the answer is incorrect; green if the answer is correct. After reviewing your answer,
+                        click the next button to continue on.
+                        When you get to the end of the quiz, click 'Finish' to see your results.
                     </p>
                 </details>
             </div>
@@ -66,10 +69,10 @@
 
         <div>
             <h2 id='line2'>
-                <p class ='choicelink' id='film_and_tv'>Click here to start movie trivia quiz</p>
-                <p class ='choicelink' id='science'>Click here to start science trivia quiz</p>
-                <p class ='choicelink' id='music'>Click here to start music trivia quiz</p>
-                <p class ='choicelink' id='geography'>Click here to start geography trivia quiz</p>
+                <p class='choicelink' id='film_and_tv'>Click here to start movie trivia quiz</p>
+                <p class='choicelink' id='science'>Click here to start science trivia quiz</p>
+                <p class='choicelink' id='music'>Click here to start music trivia quiz</p>
+                <p class='choicelink' id='geography'>Click here to start geography trivia quiz</p>
             </h2>
         </div>
 
@@ -77,31 +80,37 @@
     </section>
     <section id="quizPage" class="hidden">
         <h1>Quiz</h1>
-        <div id = 'Question'>
-            <h2 id = 'displayQuestion'></h2>
-            <div id = 'choices'>
-                <div id = 'row1'>
-                    <p class="choice"></p>
-                    <p class="choice"></p>
+        <div id='Question'>
+            <h2 id='displayQuestion'></h2>
+            <div id='choices'>
+                <div id='row1'>
+                    <button class="choice"></button>
+                    <button class="choice"></button>
                 </div>
-                <div id ='row2'>
-                    <p class="choice"></p>
-                    <p class="choice"></p>
+                <div id='row2'>
+                    <button class="choice"></button>
+                    <button class="choice"></button>
                 </div>
             </div>
             <button id="nextButton">Next Question</button>
         </div>
     </section>
-    <section id = 'resultPage' class='hidden'>
+    <section id='resultPage' class='hidden'>
         <h1>RESULTS</h1>
-        <p id = "scoreSentence"><span id="UserNamesentence"></span> scored <span id ='displayScore'></span> out of 100</p>
-        <h3 id= 'loserText' class="hidden">You Lost! You did not win the ultimate prize! 👎</h3>
-        <h3 id= 'winnerText' class="hidden">Great Job, You Won! Click to reveal the Ultimate gift!</h3> 
-        <img id = 'closedGiftbox' src = './images/giftBox.png' alt="picture of closed gift box">
-        <img id = 'loserGift1' class="hidden" src='./images/loserPic1.png' alt="picture of loser quote">
-        <img id = 'ultimateGift' class="hidden" src='./images/UltimateGift.png' alt="picture of pink chanel bag 2022 edition">
+        <p id="scoreSentence"><span id="UserNamesentence"></span> scored <span id='displayScore'></span> out of 100</p>
+        <h3 id='loserText' class="hidden">You Lost! You did not win the ultimate prize! 👎</h3>
+        <h3 id='winnerText' class="hidden">Great Job, You Won! Click to reveal the Ultimate gift!</h3>
+        <div id="allGiftImages">
+            <img id='closedGiftbox' src='./images/giftBox.png' alt="picture of closed gift box">
+            <img id='loserGift1' class="hidden" src='./images/loserPic1.png' alt="picture of loser quote">
+            <img id='ultimateGift' class="hidden" src='./images/UltimateGift.png'
+                alt="picture of pink chanel bag 2022 edition">
+        </div>
         <h2 id="clickGiftText">Click the gift box above!</h2>
     </section>
+    <audio id="mainMusic" src="./music.mp3" ></audio>
+    <audio id='loseMusic' src="./lose.mp3"></audio>
+    <audio id = 'winMusic' src="./win.mp3"></audio>
     <script src="./index.js"></script>
 </body>
 
