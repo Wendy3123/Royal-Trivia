@@ -72,16 +72,16 @@ function handleUserChoice(e) {
     if (userChoice === questionArray[currentIndex].correctAnswer.trim()) {
         score += 10                                 //if the user answer choice is correct add 10 points to score and add class list of 'correct' which you can see in css means change the background color to green
         e.target.classList.add('correct')  
-        let winmusic = document.getElementById('winMusic')
-        winmusic.play() 
+        let winmusic = document.getElementById('winMusic')      //define a var equal to the correct answer audio
+        winmusic.play()                              //.play() is a built in function you can use for audio
     }
     else {
         e.target.classList.add('incorrect')     //if user is incorrect no points are added and the class list incorrect is added and in css we can see that the .incorrect class changes background color to red
-        let losemusic = document.getElementById('loseMusic')
-        losemusic.play()
+        let losemusic = document.getElementById('loseMusic')        //define a var equal to the incorrect answer audio
+        losemusic.play()                            //.play() is a built in function you can use for audio
     }
     for(let i = 0;i<answerchoice.length;i++){
-        answerchoice[i].disabled = true
+        answerchoice[i].disabled = true          //.disabled set to true can be used with buttons so that we disable all other answer choice buttons after selecting our choice
     }
     //if correct score +10 
     //change all incorrect answers to red
@@ -91,7 +91,7 @@ function handleUserChoice(e) {
 function resetChoices() {
     for (let i = 0; i < answerchoice.length; i++) {     
         answerchoice[i].classList.remove('correct', 'incorrect')
-        answerchoice[i].disabled=false
+        answerchoice[i].disabled=false                          //.disabled set to false so we can select an option again for a new question
     }                     //this function resets the answer choices back to how it was by removing either the red/green background color from the incorrect and correct css class
 
 }
