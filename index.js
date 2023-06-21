@@ -74,11 +74,13 @@ function handleUserChoice(e) {
         e.target.classList.add('correct')  
         let winmusic = document.getElementById('winMusic')      //define a var equal to the correct answer audio
         winmusic.play()                              //.play() is a built in function you can use for audio
+        winmusic.playbackRate = 1.8;                //adjust the speed of the audio to make it faster/slower in our case, faster
     }
     else {
         e.target.classList.add('incorrect')     //if user is incorrect no points are added and the class list incorrect is added and in css we can see that the .incorrect class changes background color to red
         let losemusic = document.getElementById('loseMusic')        //define a var equal to the incorrect answer audio
         losemusic.play()                            //.play() is a built in function you can use for audio
+        losemusic.playbackRate = 3;             //adjust the speed of the audio to make it faster/slower in our case, faster
     }
     for(let i = 0;i<answerchoice.length;i++){
         answerchoice[i].disabled = true          //.disabled set to true can be used with buttons so that we disable all other answer choice buttons after selecting our choice
